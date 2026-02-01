@@ -1,10 +1,9 @@
+import Hero from "./sections/Hero";
 
 const App = () => {
   return (
     <main>
-      <div>
-        <h1>welcome to my 3d portfolio!</h1>
-      </div>
+      <Hero />
     </main>
   )
 }
