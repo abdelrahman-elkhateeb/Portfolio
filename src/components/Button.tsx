@@ -3,7 +3,7 @@ type ButtonProps = {
   id?: string,
   text?: string,
 }
-import image from "/images/arrow-down.svg";
+import image from "../../public/images/arrow-down.svg";
 
 const Button = ({ className, id, text }: ButtonProps) => {
   return (
