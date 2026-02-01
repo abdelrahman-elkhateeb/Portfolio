@@ -3,6 +3,7 @@ type ButtonProps = {
   id?: string,
   text?: string,
 }
+import image from "/images/arrow-down.svg";
 
 const Button = ({ className, id, text }: ButtonProps) => {
   return (
@@ -11,7 +12,7 @@ const Button = ({ className, id, text }: ButtonProps) => {
         <div className="bg-circle" />
         <p className="text">{text}</p>
         <div className="arrow-wrapper">
-          <img src="/images/arrow-down.svg" alt="arrow" />
+          <img src={image} alt="arrow" />
         </div>
       </div>
     </a>

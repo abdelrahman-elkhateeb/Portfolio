@@ -25,16 +25,18 @@ const Hero = () => {
                     ))}
                   </span>
                 </span>
+                <br />
+                into real projects
+                <br />
+                that deliver results
               </h1>
-              <h1>into real projects</h1>
-              <h1>that deliver results</h1>
               <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-                Hi, i'm abdelrahman elkhateeb, a Frontend developer specializing in React.js, Next.js, TypeScript, and Tailwind CSS, with expertise in
+                Hi, i'm Abdelrahman Elkhateeb, a Frontend developer specializing in React.js, Next.js, TypeScript, and Tailwind CSS, with expertise in
                 pixel-perfect implementation of Figma designs. Experienced in state management with Redux Toolkit, and
                 building responsive, accessible web applications. Familiar with Node.js, Express.js, MongoDB.
               </p>
               <Button className="md:w-80 md:h-16 h-12" id="button" text="see my work" />
-              
+
             </div>
           </div>
         </header>
