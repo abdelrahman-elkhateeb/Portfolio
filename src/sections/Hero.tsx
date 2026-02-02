@@ -1,4 +1,5 @@
 import Button from "../components/Button";
+import HeroExperience from "../components/HeroModels/HeroExperience";
 import { words } from "../constants";
 
 const Hero = () => {
@@ -31,16 +32,20 @@ const Hero = () => {
                 that deliver results
               </h1>
               <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-                Hi, i'm Abdelrahman Elkhateeb, a Frontend developer specializing in React.js, Next.js, TypeScript, and Tailwind CSS, with expertise in
-                pixel-perfect implementation of Figma designs. Experienced in state management with Redux Toolkit, and
-                building responsive, accessible web applications. Familiar with Node.js, Express.js, MongoDB.
+                Hi, i'm Abdelrahman Elkhateeb, a Frontend Engineer.
               </p>
-              <Button className="md:w-80 md:h-16 h-12" id="button" text="see my work" />
+              <Button className="md:w-80 md:h-16 h-12 mt-4" id="button" text="see my work" />
 
             </div>
           </div>
         </header>
+
         {/* right: hero 3d Model */}
+        <figure>
+          <div className="hero-3d-layout">
+            <HeroExperience />
+          </div>
+        </figure>
       </div>
     </section>
   )
