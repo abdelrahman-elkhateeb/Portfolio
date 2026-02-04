@@ -31,4 +31,4 @@ const HeroExperience = () => {
   )
 }
 
-export default HeroExperience
+export default HeroExperience;
