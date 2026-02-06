@@ -36,36 +36,47 @@ const counterItems = [
 
 const logoIconsList = [
   {
+    name: "Lumina Tech",
     imgPath: "/images/logos/company-logo-1.png",
   },
   {
+    name: "Alpha Solutions",
     imgPath: "/images/logos/company-logo-2.png",
   },
   {
+    name: "NexGen Systems",
     imgPath: "/images/logos/company-logo-3.png",
   },
   {
+    name: "Blue Horizon",
     imgPath: "/images/logos/company-logo-4.png",
   },
   {
+    name: "Cloud Peak",
     imgPath: "/images/logos/company-logo-5.png",
   },
   {
+    name: "Quantum Lab",
     imgPath: "/images/logos/company-logo-6.png",
   },
   {
+    name: "Vortex Media",
     imgPath: "/images/logos/company-logo-7.png",
   },
   {
+    name: "Global Connect",
     imgPath: "/images/logos/company-logo-8.png",
   },
   {
+    name: "Apex Industries",
     imgPath: "/images/logos/company-logo-9.png",
   },
   {
+    name: "Stellar Soft",
     imgPath: "/images/logos/company-logo-10.png",
   },
   {
+    name: "Echo Dynamics",
     imgPath: "/images/logos/company-logo-11.png",
   },
 ];
