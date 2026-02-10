@@ -10,36 +10,24 @@ gsap.registerPlugin(ScrollTrigger);
 const ExperienceSection = () => {
 
   useGSAP(() => {
-    gsap.utils.toArray(".timeline-card").forEach((card) => {
+    // 1. Handle the cards
+    const cards = gsap.utils.toArray<HTMLElement>(".timeline-card");
+    cards.forEach((card) => {
       gsap.from(card, {
         xPercent: -100,
         opacity: 0,
-        transformOrigin: "left left",
         duration: 1,
         ease: "power2.inOut",
         scrollTrigger: {
           trigger: card,
           start: "top 80%"
         }
-      })
-    })
+      });
+    });
 
-    gsap.to(".timeline", {
-      transformOrigin: "bottom bottom",
-      ease: "power1.inOut",
-      scrollTrigger: {
-        trigger: ".timeline",
-        start: "top center",
-        end: "70% center",
-        onUpdate: (self) => {
-          gsap.to(".timeline", {
-            scaleY: 1 - self.progress
-          })
-        }
-      }
-    })
-
-    gsap.utils.toArray(".expText").forEach((text) => {
+    // 2. Handle the text using a timeline if you want sequencing
+    const texts = gsap.utils.toArray<HTMLElement>(".expText");
+    texts.forEach((text) => {
       gsap.from(text, {
         opacity: 0,
         xPercent: 0,
@@ -50,7 +38,25 @@ const ExperienceSection = () => {
           start: "top 60%",
         },
       });
-    }, "<");
+    });
+
+    // 3. The timeline bar animation
+    gsap.to(".timeline", {
+      transformOrigin: "bottom bottom",
+      ease: "none", // Changed to none for smoother scroll tracking
+      scrollTrigger: {
+        trigger: ".timeline",
+        start: "top center",
+        end: "70% center",
+        scrub: true, // Scrub is usually better for "progress" bars
+        onUpdate: (self) => {
+          gsap.to(".timeline", {
+            scaleY: 1 - self.progress,
+            overwrite: "auto"
+          });
+        }
+      }
+    });
   }, []);
 
   return (
